@@ -54,6 +54,7 @@
   transition: background-color 0.3s ease;
   cursor: pointer;
   color: #fcf5e5;
+  font-weight: 500;
 }
 
 .profile__add-btn:hover {
@@ -67,18 +68,20 @@
 .profile__edit-btn {
   margin: auto 0 20px 0;
   background: none;
-  color: inherit;
+  color: #212121;
   border: none;
   width: 107.34px;
   height: 16px;
   padding: 0;
   transition: pointer 0.3s ease;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .profile__edit-icon {
   margin-right: 8px;
   padding: 0;
+  color: #212121;
 }
 
 @media screen and (max-width: 627px) {

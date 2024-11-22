@@ -15,3 +15,7 @@ Spots is an interactive social media web application where users view and like p
 This webpage is deployed to GitHub Pages
 
 - Deployment link: https://sfenci.github.io/se_project_spots
+
+## Description Video
+
+- Upload link: https://youtu.be/xnbiwplG6Q0

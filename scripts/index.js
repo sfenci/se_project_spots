@@ -46,14 +46,11 @@ function getCardElement(data) {
     .cloneNode(true);
 
   const cardNameElement = cardElement.querySelector(".card__title");
-  // const cardImgElement = cardElement.querySelector("img.src");
-  // const cardAltTextElement = cardElement.querySelector(".card__image");
-
-  debugger;
+  const cardImgElement = cardElement.querySelector(".card__image");
 
   cardNameElement.textContent = data.name;
-  // cardImgElement.textContent = data.link;
-  // cardAltTextElement.textContent = data.name;
+  cardImgElement.src = data.link;
+  cardImgElement.alt = data.name;
 
   return cardElement;
 }

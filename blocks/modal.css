@@ -11,10 +11,14 @@
   justify-content: center;
   padding: 0 16px;
   visibility: hidden;
+  opacity: 0;
+  transition: visbility 0s linear 0.5s, opacity 0.5s linear;
 }
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
 }
 
 .modal__container {
@@ -25,6 +29,31 @@
   width: 100%;
   border-radius: 8px;
   box-sizing: border-box;
+}
+
+.modal__container_type_preview {
+  padding: 0 0;
+  background: transparent;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: cover;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  background: #212121;
+  max-width: fit-content;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  line-height: 24px;
+  margin: 8px auto 0 0;
+  font-size: 20px;
+  padding: 4px 8px;
 }
 
 .modal__close-btn {
@@ -41,8 +70,20 @@
   padding: 0;
 }
 
+.modal__close-btn_type_preview {
+  top: 0;
+  right: -52.57px;
+  background-image: url(../images/close-btn-preview-light.svg);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
 .modal__close-btn:hover {
   background-image: url(../images/close-btn-hover.svg);
+}
+
+.modal__close-btn_type_preview:hover {
+  opacity: 0.4;
 }
 
 .modal__title {
@@ -115,5 +156,63 @@
 
   .modal__submit-btn {
     width: 100%;
+  }
+}
+@media screen and (max-width: 921px) {
+  .modal__container_type_preview {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal__close-btn_type_preview {
+    top: -40px;
+    right: 36px;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .modal__container_type_preview {
+    max-width: 80vw;
+    max-height: 80vh;
+    position: relative;
+  }
+  .modal__close-btn_type_preview {
+    top: -40px;
+    left: calc(100% - 30px);
+  }
+  .modal__caption {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal__container {
+    padding: 22px 12px 12px;
+  }
+
+  .modal__close-btn_type_preview {
+    top: 22px;
+    right: 12px;
+    max-width: none;
+  }
+
+  .modal__image {
+    max-height: none;
+    max-width: none;
+    width: 100%;
+  }
+
+  .modal__close_type_image-preview {
+    top: -30px;
+    right: 0;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+    line-height: 19px;
   }
 }

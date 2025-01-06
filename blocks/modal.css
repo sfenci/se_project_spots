@@ -68,6 +68,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
+  cursor: pointer;
 }
 
 .modal__close-btn_type_preview {
@@ -120,6 +121,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  cursor: pointer;
 }
 
 .modal__submit-btn:hover {
@@ -127,13 +129,6 @@
 }
 
 @media screen and (max-width: 627px) {
-  .modal {
-    padding: 0 10px;
-  }
-  .modal__container {
-    padding: 12px;
-  }
-
   .modal__title {
     font-size: 20px;
     line-height: 20px;
@@ -158,6 +153,7 @@
     width: 100%;
   }
 }
+
 @media screen and (max-width: 921px) {
   .modal__container_type_preview {
     position: relative;
@@ -181,7 +177,7 @@
   }
   .modal__close-btn_type_preview {
     top: -40px;
-    left: calc(100% - 30px);
+    right: 0px;
   }
   .modal__caption {
     font-size: 16px;
@@ -191,12 +187,12 @@
 
 @media screen and (max-width: 480px) {
   .modal__container {
-    padding: 22px 12px 12px;
+    max-width: 288px;
   }
 
   .modal__close-btn_type_preview {
     top: 22px;
-    right: 12px;
+
     max-width: none;
   }
 
@@ -214,5 +210,6 @@
   .modal__caption {
     font-size: 16px;
     line-height: 19px;
+    max-width: 265px;
   }
 }

@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/pages/index.js",
+    main: "./src/index.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -45,6 +45,7 @@ module.exports = {
           "postcss-loader",
         ],
       },
+
       {
         test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",

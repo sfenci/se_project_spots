@@ -6,13 +6,6 @@ import {
   resetValidation,
 } from "../scripts/validation.js";
 
-// Import the image
-import spotsLogoSrc from "./images/Logo.svg";
-
-// Select the element and set the src
-const spotsImage = document.getElementById("image-steps");
-spotsImage.src = spotsLogoSrc;
-
 const initialCards = [
   {
     name: "Val Thorens",

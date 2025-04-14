@@ -12,22 +12,26 @@
   <body>
     <div class="page">
       <header class="header">
-        <img id="spots-logo" alt="Spots Logo" class="header__logo" />
-        <!-- src="./images/Logo.svg" -->
+        <img
+          alt="Spots Logo"
+          class="header__logo"
+          src="<%=require./images/Logo.svg"
+          %
+        />
       </header>
       <main class="content">
         <section class="profile">
           <img
-            src="./images/avatar.jpg"
-            alt="Bessie Coleman"
             class="profile__avatar"
+            alt="Bessie Coleman"
+            src="<%=require('./images/avatar.jpg')%>"
           />
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img
-                src="./images/Pencil.svg"
+                src="<%=require(./images/Pencil.svg)%>"
                 alt="Pencil Icon"
                 class="profile__edit-icon"
               />Edit Profile

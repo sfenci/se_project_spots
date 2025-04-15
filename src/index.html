@@ -15,8 +15,7 @@
         <img
           alt="Spots Logo"
           class="header__logo"
-          src="<%=require./images/Logo.svg"
-          %
+          src="<%= require('./images/Logo.svg') %>"
         />
       </header>
       <main class="content">
@@ -24,14 +23,14 @@
           <img
             class="profile__avatar"
             alt="Bessie Coleman"
-            src="<%=require('./images/avatar.jpg')%>"
+            src="<%= require('./images/avatar.jpg') %>"
           />
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img
-                src="<%=require(./images/Pencil.svg)%>"
+                src="<%= require('./images/Pencil.svg') %>"
                 alt="Pencil Icon"
                 class="profile__edit-icon"
               />Edit Profile
@@ -39,7 +38,7 @@
           </div>
           <button type="button" class="profile__add-btn">
             <img
-              src="<%=require(./images/PlusIcon.svg)%>"
+              src="<%= require('./images/PlusIcon.svg') %>"
               alt="Plus Icon"
               class="profile__add-icon"
             />New Post

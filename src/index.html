@@ -20,11 +20,20 @@
       </header>
       <main class="content">
         <section class="profile">
-          <img
-            class="profile__avatar"
-            alt="Bessie Coleman"
-            src="<%= require('./images/avatar.jpg') %>"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img
+                alt="Pencil Icon"
+                class="avatar__edit-icon"
+                src="<%= require('./images/pencil-light.svg') %>"
+              />
+            </button>
+            <img
+              class="profile__avatar"
+              alt="Bessie Coleman"
+              src="<%= require('./images/avatar.jpg') %>"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -153,6 +162,30 @@
           <img class="modal__image" alt="" src="" />
           <p class="modal__caption"></p>
         </div>
+      </div>
+    </div>
+
+    <!-- TO-DO COMPLETE AVATAR MODAL FIGMA/VALIDATION/TWEAKS (NOVALIDATE ON FORM?)-->
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button type="button" class="modal__close-btn"></button>
+        <h2 class="modal__title">Edit Avatar</h2>
+        <form class="modal__form" id="edit-avatar-form">
+          <label for="profile-avatar-input" class="modal__label"
+            >Avatar
+            <input
+              id="profile-avatar-input"
+              class="modal__input"
+              name="avatar"
+              placeholder="avatar goes here"
+              required
+            />
+            <span id="profile-avatar-input-error" class="modal__error"
+              >Please fill out this field.</span
+            >
+          </label>
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
       </div>
     </div>
   </body>

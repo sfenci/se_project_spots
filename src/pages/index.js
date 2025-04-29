@@ -55,7 +55,7 @@ api
     });
     profileName.textContent = userInfo.name;
     profileDescription.textContent = userInfo.about;
-    // profileImage.src = userInfo.avatar;
+    profileImage.src = userInfo.avatar;
   })
   .catch(console.error);
 

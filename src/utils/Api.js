@@ -56,6 +56,13 @@ class Api {
     }).then(this._processResponse);
   }
 
+  toggleLikeStatus(id, isLiked) {
+    return fetch(`${this._baseUrl}/cards/${id}/likes`, {
+      method: isLiked ? "DELETE" : "PUT",
+      headers: this._headers,
+    }).then(this._processResponse);
+  }
+
   editUserAvatar({ avatar }) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
@@ -68,28 +75,3 @@ class Api {
 }
 
 export default Api;
-
-// addNewCard({ name, link }) {
-//   return fetch(`${this._baseUrl}/cards`, {
-//     method: "POST",
-//     headers: this._headers,
-//     body: JSON.stringify({
-//       name,
-//       link,
-//     }),
-//   }).then(this._processResponse);
-// }
-
-// toggleLike(id, isLiked) {
-//   const method = isLiked ? "DELETE" : "PUT";
-//   return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-//     method: method,
-//     headers: this._headers,
-//   });
-// }
-
-// getUserAvatar() {
-//   return fetch(`${this._baseUrl}/users/me/avatar`, {
-//     headers: this._headers,
-//   }).then(this._processResponse);
-// }

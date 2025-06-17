@@ -57,9 +57,6 @@
   font-size: 32px;
   text-overflow: ellipsis;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121;
 }
@@ -71,9 +68,6 @@
   line-height: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121;
   opacity: 0.7;
@@ -145,10 +139,14 @@
     margin-bottom: 12px;
   }
 
-  /* TODO FINISH AVATAR BTN STYLES */
+  .profile__avatar-container {
+    margin: 0px;
+  }
 
   .profile__avatar-btn {
-    visibility: visible;
+    visibility: hidden;
+    height: 80px;
+    width: 80px;
   }
 
   .profile__avatar-btn::after {

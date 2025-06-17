@@ -60,7 +60,7 @@ export const resetValidation = (formEl, inputList, config) => {
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonEl = formEl.querySelector(config.submitButtonSelector);
-
+  if (!buttonEl) return;
   toggleButtonState(inputList, buttonEl, config);
 
   inputList.forEach((inputEl) => {
